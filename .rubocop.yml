@@ -10,3 +10,7 @@ Style/StringLiterals:
   EnforcedStyle: double_quotes
 Layout/TrailingWhitespace: 
   Enabled: false
+Style/Documentation: 
+  Enabled: false
+Style/EmptyMethod: 
+  Enabled: false
