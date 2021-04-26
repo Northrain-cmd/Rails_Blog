@@ -16,6 +16,14 @@
 </div>
 
 <div>
+  <%= form.select :status, [
+    ["Make Public","public"], 
+    ["Make Private","private"], 
+    ["Archive","archived"]]
+  %>
+</div>
+
+<div>
   <%= form.submit %>
 </div>
 <% end %>
