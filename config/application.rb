@@ -20,3 +20,14 @@ module Blog
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
+
+module ExecJS
+  module Runtimes
+    Node = ExternalRuntime.new(
+      name:        "Node.js (V8)",
+      command:     ["node", "nodejs"], # This is how to initialize Node
+      runner_path: ExecJS.root + "/support/node_runner.js",
+      encoding:    'UTF-8'
+    )
+  end
+end

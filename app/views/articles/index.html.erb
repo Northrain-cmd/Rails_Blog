@@ -1,13 +1,22 @@
-<h1>Hello, Rails!</h1>
-<h2>Our blog has <%= Article.public_count %> articles and counting</h2>
-<ul>
- <% @articles.each do |article| %>
+<h1 class="col-12 py-2 text-white header bg-secondary text-center">My Rails Blog</h1>
+<div class="alert alert-info" role="alert">
+  <h5 class="text-center">This blog has <%= Article.public_count %> articles and counting</h5>
+</div>
+<div class ="container d-flex justify-content-around flex-wrap">
+  <% @articles.each do |article| %>
   <% unless article.archived? %>
-  <li>
-    <%= link_to article.title, article %>
-  </li>
+    <div class="card d-flex mb-3" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"> <%= article.title %> </h5>
+       <p class="card-text"><%= truncate(article.body, length: 30) %></p>
+       <a href="<%= article_path(article) %>" class="btn btn-primary">Read more</a>
+    </div>
+  </div>
     <% end %>
   <% end %>
-</ul>
 
-<%= link_to "New Article", new_article_path %>
+</div>
+ 
+<div class="mx-auto col-3 mb-3">
+  <a class="btn btn-success w-100 p-2" href="<%= new_article_path %>">Add Article</a>
+</div>
