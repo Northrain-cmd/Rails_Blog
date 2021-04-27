@@ -1,5 +1,10 @@
 <div class="alert alert-info" role="alert">
-  <h5 class="text-center">This blog has <%= Article.public_count %> articles and counting</h5>
+  <h5 class="text-center">
+      This blog has <%= Article.public_count %> articles and counting <br><br>
+      <span class="h5">
+        Test account: login => "DHH", password => "secret"
+      </span>
+  </h5>
 </div>
 <div class ="container d-flex justify-content-around flex-wrap">
   <% @articles.each do |article| %>
