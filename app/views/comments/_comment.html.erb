@@ -8,8 +8,8 @@
     <%= comment.body %>
   </p>
 
-   <p>
+   <p class="align-self-center">
     <%= link_to "Destroy Comment", [comment.article, comment],
-                                    method: :delete,
+                                    method: :delete, class: "btn btn-danger",
                                     data: { confirm: "Are you sure?" } %>
   </p>
